@@ -1,0 +1,10 @@
+<nav id="navigation">
+  <ul>
+    <li><a href="/">Home</a></li>
+    {{- range last 1 (where $.Site.RegularPages "Section" "version") -}}
+    <li><a href="{{ .RelPermalink }}">Latest Version</a></li>
+    {{- end -}}
+    <li><a href="/form-page" title="TODO Form Page">TODO Form</a></li>
+    <li><a href="/faq" title="Frequently Asked Questions">FAQ</a></li>
+  </ul>
+</nav>
